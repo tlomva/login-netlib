@@ -25,7 +25,7 @@ async function sendTelegram(message) {
   if (!token || !chatId) return;
 
   const now = new Date();
-  const hkTime = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+  const hkTime = new Date(now.getTime() + (10 * 60 * 60 * 1000));
   const timeStr = hkTime.toISOString().replace('T', ' ').substr(0, 19) + " HKT";
 
   const fullMessage = `🎉 Netlib 登录通知\n\n登录时间：${timeStr}\n\n${message}`;
